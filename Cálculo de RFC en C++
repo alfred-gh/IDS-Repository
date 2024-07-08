@@ -1,0 +1,45 @@
+#include <iostream>
+using namespace std;
+ 
+int main()
+{
+    char apellidoP[40];
+    char nombre[40];
+    string apellidoM;
+    string fecha;
+    
+    
+     cout<<"Ingrese su apellido materno: ";
+     getline(cin, apellidoM);
+     
+    cout << "Escribe tu apellido paterno: ";
+    cin >>  apellidoP;
+    
+    cout << "Escribe tu nombre: ";
+    cin >>  nombre;
+    cout << "Introduce tu fecha de nacimiento (año, mes y día): ";
+    cin >> fecha;
+    
+    string anio = fecha.substr(2, 2);
+    string mes = fecha.substr(4, 2);
+    string dia = fecha.substr(6, 2);
+   
+    cout <<"Tu RFC sin homoloclave es:" <<apellidoP[0];
+    
+       if(apellidoP[1]=='a' ||apellidoP[1]=='e' ||apellidoP[1]=='i' || apellidoP[1]=='o' || apellidoP[1]=='u'||apellidoP[1]=='A' ||apellidoP[1]=='E' ||apellidoP[1]=='I' || apellidoP[1]=='O' || apellidoP[1]=='U')
+    cout<<apellidoP[1];
+       else if(apellidoP[2]=='a' ||apellidoP[2]=='e' ||apellidoP[2]=='i' || apellidoP[2]=='o' || apellidoP[2]=='u'||apellidoP[2]=='A' ||apellidoP[2]=='E' ||apellidoP[2]=='I' || apellidoP[2]=='O' || apellidoP[2]=='U')
+    cout<<apellidoP[2];
+    else 
+    cout<<apellidoP[3];
+
+  if (apellidoM.empty()){
+      cout<<"X";
+  }else{
+      cout<<apellidoM[0];
+  }
+    
+    cout<<nombre[0]<<anio<<mes<<dia << endl;
+    
+    return 0;
+}
